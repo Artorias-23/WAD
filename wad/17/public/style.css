@@ -1,0 +1,22 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: #f4f4f4;
+  }
+  
+  .employee {
+    border: 1px solid #ddd;
+    margin: 10px;
+    padding: 10px;
+    display: inline-block;
+    width: 200px;
+    background: white;
+    border-radius: 5px;
+  }
+  
+  .employee img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+  

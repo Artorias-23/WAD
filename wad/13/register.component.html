@@ -1,0 +1,8 @@
+<h2>User Registration</h2>
+<div *ngIf="!registered">
+  <input [(ngModel)]="name" placeholder="Name"><br>
+  <input [(ngModel)]="email" placeholder="Email"><br>
+  <input [(ngModel)]="password" placeholder="Password" type="password"><br>
+  <button (click)="register()">Register</button>
+</div>
+<p *ngIf="registered">Registration successful!</p>

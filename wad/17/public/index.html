@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Employee Directory</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Employee Directory</h1>
+  <div id="employeeList"></div>
+
+  <script>
+    fetch('/api/employees')
+      .then(response => response.json())
+      .then(data => {
+        const list = document.getElementById('employeeList');
+        data.forEach(emp => {
+          const div = document.createElement('div');
+          div.className = 'employee';
+          div.innerHTML = `
+            <img src="${emp.image}" alt="${emp.name}">
+            <h3>${emp.name}</h3>
+            <p><strong>Designation:</strong> ${emp.designation}</p>
+            <p><strong>Department:</strong> ${emp.department}</p>
+            <p><strong>Salary:</strong> ₹${emp.salary}</p>
+          `;
+          list.appendChild(div);
+        });
+      });
+  </script>
+</body>
+</html>

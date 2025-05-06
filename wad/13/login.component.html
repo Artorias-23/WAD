@@ -1,0 +1,8 @@
+<h2>User Login</h2>
+<div *ngIf="!loggedIn">
+  <input [(ngModel)]="email" placeholder="Email"><br>
+  <input [(ngModel)]="password" placeholder="Password" type="password"><br>
+  <button (click)="login()">Login</button>
+</div>
+<p>{{ message }}</p>
+<app-profile *ngIf="loggedIn"></app-profile>

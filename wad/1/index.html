@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Catalog</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>Product Catalog</h2>
+  <div class="table-container">
+    <table id="productTable">
+      <thead>
+        <tr>
+          <th>Image</th>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Product rows will be added by JavaScript -->
+      </tbody>
+    </table>
+  </div>
+  <div id="pagination"></div>
+
+  <script>
+    const products = [];
+
+    // Add 20 dummy products for example
+    for (let i = 1; i <= 20; i++) {
+      products.push({
+        name: "Product " + i,
+        price: "$" + (10 * i),
+        description: "This is product number " + i,
+        image: "https://via.placeholder.com/100"
+      });
+    }
+
+    const rowsPerPage = 10;
+    let currentPage = 1;
+
+    function displayTable(products, page) {
+      const tableBody = document.querySelector("#productTable tbody");
+      tableBody.innerHTML = "";
+
+      const start = (page - 1) * rowsPerPage;
+      const end = start + rowsPerPage;
+      const paginatedItems = products.slice(start, end);
+
+      paginatedItems.forEach(product => {
+        const row = document.createElement("tr");
+        row.innerHTML = `
+          <td><img src="${product.image}" alt="img" width="60"></td>
+          <td>${product.name}</td>
+          <td>${product.price}</td>
+          <td>${product.description}</td>
+        `;
+        tableBody.appendChild(row);
+      });
+
+      setupPagination(products);
+    }
+
+    function setupPagination(products) {
+      const pagination = document.getElementById("pagination");
+      pagination.innerHTML = "";
+
+      const pageCount = Math.ceil(products.length / rowsPerPage);
+      for (let i = 1; i <= pageCount; i++) {
+        const btn = document.createElement("button");
+        btn.textContent = i;
+        btn.className = i === currentPage ? "active" : "";
+        btn.onclick = () => {
+          currentPage = i;
+          displayTable(products, currentPage);
+        };
+        pagination.appendChild(btn);
+      }
+    }
+
+    // Initialize
+    displayTable(products, currentPage);
+  </script>
+</body>
+</html>

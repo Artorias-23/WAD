@@ -1,0 +1,11 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f9f9f9;
+  }
+  
+  .dish img {
+    width: 200px;
+    border-radius: 10px;
+  }
+  

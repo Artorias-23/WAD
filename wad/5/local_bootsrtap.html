@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>E-Commerce Product Listing</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap is already installed, so no CDN needed -->
+</head>
+<body>
+
+<div class="container my-4">
+  <h2 class="text-center">E-Commerce Product Listing</h2>
+
+  <!-- Dropdown for Category Filter -->
+  <div class="dropdown my-3">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+      Filter by Category
+    </button>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="#">All</a></li>
+      <li><a class="dropdown-item" href="#">Electronics</a></li>
+      <li><a class="dropdown-item" href="#">Clothing</a></li>
+      <li><a class="dropdown-item" href="#">Books</a></li>
+    </ul>
+  </div>
+
+  <!-- Product Grid -->
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+    <div class="col">
+      <div class="card h-100">
+        <img src="https://via.placeholder.com/200x150?text=Laptop" class="card-img-top" alt="Laptop">
+        <div class="card-body">
+          <h5 class="card-title">Laptop</h5>
+          <p class="card-text">Powerful and portable laptop.</p>
+          <p class="text-success">₹45,000</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100">
+        <img src="https://via.placeholder.com/200x150?text=T-Shirt" class="card-img-top" alt="T-Shirt">
+        <div class="card-body">
+          <h5 class="card-title">Graphic T-Shirt</h5>
+          <p class="card-text">Comfortable cotton with cool design.</p>
+          <p class="text-success">₹599</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100">
+        <img src="https://via.placeholder.com/200x150?text=Book" class="card-img-top" alt="Book">
+        <div class="card-body">
+          <h5 class="card-title">HTML & CSS Guide</h5>
+          <p class="card-text">Perfect for web development beginners.</p>
+          <p class="text-success">₹299</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- No need for Bootstrap JS if interactivity (dropdown) already works -->
+
+</body>
+</html>

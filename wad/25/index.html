@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Personal Portfolio</title>
+  <!-- jQuery Mobile CDN -->
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+
+<!-- Home Page -->
+<div data-role="page" id="home">
+  <div data-role="header">
+    <h1>My Portfolio</h1>
+  </div>
+
+  <div data-role="navbar">
+    <ul>
+      <li><a href="#about" data-transition="slide">About Me</a></li>
+      <li><a href="#projects" data-transition="slide">Projects</a></li>
+      <li><a href="#skills" data-transition="slide">Skills</a></li>
+      <li><a href="#contact" data-transition="slide">Contact</a></li>
+    </ul>
+  </div>
+
+  <div data-role="content">
+    <h2>Welcome to My Portfolio</h2>
+    <p>This is a simple mobile portfolio website built using jQuery Mobile.</p>
+  </div>
+</div>
+
+<!-- About Me Page -->
+<div data-role="page" id="about">
+  <div data-role="header">
+    <h1>About Me</h1>
+    <a href="#home" data-icon="home" data-transition="slide">Home</a>
+  </div>
+
+  <div data-role="content">
+    <h3>Hello! I'm [Your Name]</h3>
+    <p>I am a passionate web developer with experience in frontend and backend technologies. I love creating user-friendly and dynamic web applications.</p>
+    <img src="https://via.placeholder.com/200" alt="Your Image" width="200" />
+  </div>
+</div>
+
+<!-- Projects Page -->
+<div data-role="page" id="projects">
+  <div data-role="header">
+    <h1>Projects</h1>
+    <a href="#home" data-icon="home" data-transition="slide">Home</a>
+  </div>
+
+  <div data-role="content">
+    <h3>My Projects</h3>
+    <ul>
+      <li><strong>Project 1:</strong> A dynamic to-do list app built using JavaScript and localStorage.</li>
+      <li><strong>Project 2:</strong> A weather app that fetches data using an API and displays real-time weather information.</li>
+      <li><strong>Project 3:</strong> A personal blog built using WordPress with custom themes and plugins.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Skills Page -->
+<div data-role="page" id="skills">
+  <div data-role="header">
+    <h1>Skills</h1>
+    <a href="#home" data-icon="home" data-transition="slide">Home</a>
+  </div>
+
+  <div data-role="content">
+    <h3>My Skills</h3>
+    <ul>
+      <li><strong>Frontend Development:</strong> HTML, CSS, JavaScript, jQuery, React</li>
+      <li><strong>Backend Development:</strong> Node.js, Express.js</li>
+      <li><strong>Databases:</strong> MongoDB, MySQL</li>
+      <li><strong>Version Control:</strong> Git, GitHub</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Contact Page -->
+<div data-role="page" id="contact">
+  <div data-role="header">
+    <h1>Contact</h1>
+    <a href="#home" data-icon="home" data-transition="slide">Home</a>
+  </div>
+
+  <div data-role="content">
+    <h3>Contact Information</h3>
+    <p>If you'd like to get in touch with me, feel free to send me an email or follow me on social media.</p>
+    <p><strong>Email:</strong> yourname@example.com</p>
+    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/yourname" target="_blank">yourname</a></p>
+    <p><strong>GitHub:</strong> <a href="https://github.com/yourname" target="_blank">yourname</a></p>
+  </div>
+</div>
+
+</body>
+</html>

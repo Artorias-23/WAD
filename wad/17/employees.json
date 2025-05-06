@@ -1,0 +1,24 @@
+[
+    {
+      "name": "Ayush Sheth",
+      "designation": "Software Engineer",
+      "department": "IT",
+      "salary": 60000,
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "name": "Neha Singh",
+      "designation": "Project Manager",
+      "department": "Operations",
+      "salary": 75000,
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "name": "Rohan Mehta",
+      "designation": "UI/UX Designer",
+      "department": "Design",
+      "salary": 55000,
+      "image": "https://via.placeholder.com/150"
+    }
+  ]
+  
